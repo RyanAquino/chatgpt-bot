@@ -1,9 +1,11 @@
+import os
+from dotenv import load_dotenv
 import openai
-
-openai.api_key = "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"
 
 
 def main():
+    load_dotenv()
+    openai.api_key = os.getenv("OPENAPI_API_KEY")
     model_engine = "text-davinci-003"
     print("Ctr+C to exit")
 
@@ -15,7 +17,7 @@ def main():
                 prompt=msg,
                 temperature=0.6
             )
-            print(f"ChatGPT: {response}")
+            print(f"ChatGPT: {response.choices[0].text.strip()}")
     except KeyboardInterrupt:
         exit()
 
