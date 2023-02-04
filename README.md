@@ -1,5 +1,5 @@
-# ChatGPT Bot
-Program that responds to users messages.
+# Telegram ChatGPT Bot
+Program that responds to users messages on Telegram. Send messages to https://t.me/tgram_chatgpt_ph_bot
 
 ### Requirements
 * Python 3
